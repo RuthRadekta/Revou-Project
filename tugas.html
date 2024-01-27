@@ -9,9 +9,9 @@
     </head>
     <body>
 
-        <nav class="row">
-            <div class="side"><a href="#">Mr Fresh.</a></div>
-            <div class="menu">
+        <nav class="row logo">
+            <div class="side" style="padding: 7px;"><a href="#">Mr Fresh.</a></div>
+            <div class="menu menu-1">
                 <div><a href="#">Home</a></div>
                 <div><a href="#">Our Package</a></div>
                 <div><a href="#">Call Us</a></div>
@@ -19,21 +19,66 @@
         </nav>
 
         <div class="header">
-            <h2>Header</h2>
-            <p style="font-size: small;">DIHUBUNGIN GIT/GITHUB DESKTOP DULU</p>
+            <h2>Top Rated E-Groceries Shop in Indonesian</h2>
+            <p style="font-size: small;">Everyday with the best ingredients</p>
         </div>
 
         <div class="row">
-            <div class="column middle" style="background-color:darkolivegreen;">Column</div>
-            <div class="column side" style="background-color:darksalmon;">Column</div>
+            <div class="column middle">
+                <div class="gallery">
+                    <img src="Assets/sayur.jpg" alt="sayur" style="width: 100%; border-radius: 10px;">
+                </div>
+                <div>
+                    <p class="comment">"setiap hari beli sayur buah yang fresh disini"</p> <br>
+                    <div class="user row">
+                        <div class="side"><img src="" alt="profile"></div>
+                        <div>
+                            <a href="#">username</a>
+                            <p style="margin-top: 5px;">pekerjaan</p>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h2>FAQ</h2>
+                    <ul>
+                        <li>satu</li>
+                        <li>dua</li>
+                        <li>tiga</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="column side">
+                <form>
+                    <div style="text-align: center;">
+                        <h2>Contact Us</h2>
+                        <p style="font-size: 11px;">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>
+                    </div> <br>
+                    
+                    <label for="name">Your name</label>
+                    <input type="text" id="name" name="name" required>
+            
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+            
+                    <label for="message">What are you interested in?</label>
+                    <select style="width: 50%; height: 30px;">
+                        <option value="option1">Opsi 1</option>
+                        <option value="option2">Opsi 2</option>
+                        <option value="option3">Opsi 3</option>
+                    </select><br>
+            
+                    <br><br><button type="submit">Send</button>
+                </form>
+            </div>
+        </div>
+
+        <div>
+            <h2>Offers</h2>
         </div>
 
         <div class="footer">
             <p>Footer</p>
-        </div>
-
-        <div class="footer">
-            <p>TES STICKY NAVBAR</p>
         </div>
 
     </body>
