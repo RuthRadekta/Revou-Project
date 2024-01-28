@@ -4,13 +4,19 @@
     -webkit-flex-direction: column;
     flex-direction: column;
   }
+  
+  body{
+    width: 100%;
+    margin-right: -90%;
+  }
 
   button{
     width: auto;
   }
 
   .comment{
-    font-size: 10px;
+    margin-top: 0px;
+    font-size: 20px;
   }
 
   .logo{
@@ -19,11 +25,48 @@
   }
 
   .user-mobile{
-    margin-right: 30px;
+    margin-right: 250px;
   }
 
   .user-details{
-    margin-left: 130px;
+    margin-left: 300px;
+  }
+
+  .testimonial-slide{
+    width: auto;
+  }
+
+  .gallery-mobile{
+    max-width: 450px;
+    max-height: 300px;
+  }
+
+  footer{
+    width: 100%;
+    height: auto;
+  }
+
+  .header h2{
+    font-size: 50px;
+  }
+
+  .header p{
+    font-size: 50px;
+  }
+  
+  nav img{
+    width: 10%;
+  }
+
+  nav .side{
+    font-size: 20px;
+    text-align: center;
+  }
+
+  nav .menu{
+    margin-top: 10px;
+    margin-bottom: -30px;
+    font-size: 20px;
   }
  }
 
@@ -68,6 +111,10 @@ nav .side{
   text-align: center;
   font-size: 20px;
 }
+
+.header p{
+  font-size: large;
+}
   
 .row {
   display: -webkit-flex;
@@ -100,6 +147,7 @@ nav .side{
   background-color: #333;
   color: #fff;
   padding: 30px 0;
+  width: 100%;
 }
 
 .footer-content {
@@ -193,6 +241,12 @@ button:hover {
   padding: 20px;
 }
 
+.gallery img{
+  width: 800px;
+  height: 500px;
+  border-radius: 10px;
+}
+
 .comment-container {
   margin-bottom: 10px;
 }
@@ -205,11 +259,23 @@ button:hover {
 
 .user{
   padding: 0px;
-  width: auto;
+  width: 450px;
+  margin-left: 160px;
 }
 
 .user-details{
-  margin-right: 100px;
+  margin-right: 120px;
+  margin-left: auto;
+}
+
+.user-details a{
+  cursor: default;
+}
+
+.user-details p{
+  margin-top: 5px; 
+  font-style: italic; 
+  font-size: small;
 }
 
 .user .side{
@@ -220,7 +286,7 @@ button:hover {
 
 .user-profile{
   width: 40px; 
-  margin-left: 30px;
+  margin-left: 100px;
 }
 
 .select-opt{
@@ -305,34 +371,3 @@ button:hover {
   font-size: 14px;
 }
 
-.testimonial-slideshow {
-  border-radius: 20px;
-  overflow: hidden;
-  position: relative;
-  max-width: 100%;
-  margin: auto;
-}
-
-.testimonial-slide {
-  display: none;
-  text-align: center;
-}
-
-.testimonial-slide img {
-  width: 80px;
-  border-radius: 50%;
-  margin-top: 20px;
-}
-
-.testimonial-content {
-  padding: 20px;
-}
-
-.user-details {
-  margin-top: 10px;
-}
-
-.user-details p {
-  font-style: italic;
-  font-size: small;
-}
