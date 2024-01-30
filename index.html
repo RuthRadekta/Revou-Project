@@ -7,18 +7,18 @@
         <link rel="stylesheet" href="CSS/style.css">
         <script src="JS/script.js"></script>
         <link rel="icon" href="Assets/freshy.png" type="freshy">
+
     </head>
-    <body>
+    <body class="loaded">
 
         <nav class="row logo">
             <img src="Assets/freshy.png" alt="" width="30px">
-            <div class="side" style="padding: 7px;"><a href="#">Mr Fresh.</a></div>
-            <div class="menu menu-1">
+            <div class="side" style="padding: 7px;"><a href="#" style="font-size: 20px; color: #4caf50; font-family:fantasy;">Mr Fresh <span style="color: #f85a40;">.</span></a></div>
+            <div class="menu">
                 <div><a href="#">Home</a></div>
                 <div><a href="#package-section">Our Package</a></div>
                 <div><a href="#footer">Call Us</a></div>
             </div>
-            <!--<input type="text" id="search" onkeyup="showResult(this.value)" placeholder="Search..">-->
         </nav>
 
         <div class="header">
@@ -101,24 +101,9 @@
                                 </div>
                             </div>
                         </div>
+                        <button id="prevButton">&lt;</button>
+                        <button id="nextButton">&gt;</button>
                     </div>
-
-                <!--<div class=" gallery">
-                    <img src="Assets/sayur.jpg" alt="sayur" style="width: 100%; border-radius: 10px;">
-                </div>
-                <div class="comment-container">
-                    <div>
-                        <p class="comment">"setiap hari beli sayur buah yang fresh disini"</p> <br>
-                        <div class="user row user-mobile">
-                            <div class="side"><img src="Assets/user.jpeg" alt="profile" class="user-profile"></div>
-                            <div class="user-details">
-                                <a href="#" style="cursor: default;">Florence Hughes</a>
-                                <p style="margin-top: 5px; font-style: italic; font-size: small;">Ibu rumah tangga, 28</p>
-                            </div>
-                        </div>
-                        <br> <hr style="width: 50%;">
-                    </div>
-                </div>-->
 
                 <div id="package-section" class="package-section">
                     <h2>Discover the Freshness and Convenience</h2>
@@ -150,12 +135,12 @@
             </div>
 
             <div class="column side">
-                <form>
+                <form onsubmit="return validateForm()">
                     <div style="text-align: center;">
                         <h2>Contact Us</h2>
                         <p style="font-size: 11px;">Sales akan menghubungi Anda 1x24 jam setelah data kami terima</p>
                     </div> <br>
-                    
+            
                     <label for="name">Your Name</label>
                     <input type="text" id="name" name="name" placeholder="First and last name" required>
             
@@ -166,11 +151,20 @@
                     <select class="select-opt">
                         <option value="option1">Customer</option>
                         <option value="option2">Seller</option>
-                        <option value="option3">Customer and Seller</option>
                         <option value="option4">Member (All includes)</option>
                     </select><br>
             
                     <br><br><button type="submit">Send</button>
+
+                    <div class="popup" id="popup">
+                        <div class="overlay" id="overlay"></div>
+                        <div id="popup-content">
+                            <h3>Invalid Email</h3>
+                            <p>Please enter a valid email address from allowed domains.</p>
+                            <p class="ok" onclick="closePopup()">OK</p>
+                            <span class="close" onclick="closePopup()">&times;</span>
+                        </div>
+                    </div>
                 </form>
 
                 <br><div id="faq" class="faq">
@@ -222,32 +216,6 @@
                 <p>&copy; 2024 Mr Fresh. All Rights Reserved.</p>
             </div>
         </footer>        
-
-        <script>
-            let currentTestimonial = 0;
-            const testimonialSlides = document.querySelectorAll('.testimonial-slide');
-        
-            function showTestimonial(index) {
-                testimonialSlides.forEach((slide, i) => {
-                    if (i === index) {
-                        slide.style.display = 'block';
-                    } else {
-                        slide.style.display = 'none';
-                    }
-                });
-            }
-        
-            function nextTestimonial() {
-                currentTestimonial = (currentTestimonial + 1) % testimonialSlides.length;
-                showTestimonial(currentTestimonial);
-            }
-        
-            // Set interval for automatic testimonial slideshow (change testimonial every 5 seconds)
-            setInterval(nextTestimonial, 5000);
-        
-            // Initial display
-            showTestimonial(currentTestimonial);
-        </script>
 
     </body>
 </html>
