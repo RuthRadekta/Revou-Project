@@ -72,11 +72,16 @@
   }
   #prevButton,
     #nextButton {
-        display: block;
+        display: none;
     }
 
   #package-section{
     margin-top: -70px;
+  }
+
+  #popup{
+    left: 30%;
+    top: 40%;
   }
 }
 
@@ -104,6 +109,14 @@ nav .side{
   -webkit-flex: 1;
   -ms-flex: 1;
   flex: 1;
+}
+
+.mrfresh {
+  transition: transform 0.3s ease;
+}
+
+.mrfresh:hover {
+  transform: translateY(-10px);
 }
 
 .menu{
@@ -222,36 +235,55 @@ form {
   height: auto;
   margin-top: 20px;
   margin-bottom: 10px;
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+  opacity: 0;
+  transform: translateY(-20px);
+}
+
+form h2 {
+  transition: transform 0.3s ease;
+}
+
+form h2:hover {
+  transform: translateY(-5px);
+  cursor: default;
+}
+
+form input[type="text"]:hover,
+form input[type="email"]:hover,
+form select:hover {
+    border-color: #4CAF50;
 }
 
 label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-    font-size: small;
+  display: block;
+  margin-bottom: 8px;
+  color: #333;
+  font-size: small;
 }
 
 input {
-    width: 100%;
-    padding: 8px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
 }
 
 button {
-    background-color: #4caf50;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    width: 100%;
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
 }
 
 button:hover {
-    background-color: #45a049;
+  background-color: #45a049;
+  transform: scale(1.05);
 }
 
 .gallery{
@@ -263,6 +295,13 @@ button:hover {
   width: 800px;
   height: 500px;
   border-radius: 10px;
+  transition: 0.3s;
+  box-shadow: 0.3s;
+}
+
+.gallery img:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .comment-container {
@@ -325,6 +364,7 @@ button:hover {
   margin-bottom: 10px;
   cursor: pointer;
   position: relative;
+  font-size: large;
 }
 
 .faq li::before {
@@ -344,11 +384,17 @@ button:hover {
   margin-top: 10px;
   padding: 10px;
   border-top: 1px solid #ddd;
+  color: #333;
 }
 
 .faq li.open .answer {
   display: block;
   cursor: default;
+  font-weight: normal;
+}
+
+.faq li.open{
+  font-weight: bold;
 }
 
 .package-section {
@@ -396,14 +442,14 @@ button:hover {
 .popup {
   display: none;
   position: fixed;
-  top: 50%;
-  left: 50%;
+  top: 40%;
+  left: 40%;
   transform: translate(-50%, -50%);
   background-color: #fff;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
+  z-index: 9999;
   max-width: 300px;
   width: 100%;
   text-align: center;
@@ -491,12 +537,6 @@ button:hover {
 
 .testimonial-slide img {
   transition: transform 0.5s ease-in-out;
-}
-
-form, .popup {
-  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
-  opacity: 0;
-  transform: translateY(-20px);
 }
 
 #prevButton {
