@@ -6,8 +6,9 @@
   }
   
   body{
-    width: 190%;
+    width: 100%;
     height: auto;
+    margin-right: -90%;
   }
 
   button{
@@ -91,7 +92,10 @@
   
 body {
   font-family: 'Poppins', sans-serif;
-
+  width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 a{
